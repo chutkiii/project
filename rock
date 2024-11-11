@@ -1,0 +1,50 @@
+import random
+rock ="""
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+"""
+paper = """
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+"""
+scissors = """
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+"""
+position = [rock ,paper ,scissors]
+k = int(input("select between 0 to 2: "))
+print(position[k])
+c = random.randint(0,2)
+print(c)
+print(position[c])
+if(k>2 and k<0):
+    print('invalid value you lose!')
+else:
+    if(k==0 and c==1):
+        print('you lose')
+    elif(k==1 and c==0):
+        print('you win')
+    elif(k==1 and c==2):
+        print('you lose')
+    elif(k==2 and c==1):
+        print('you win')
+    elif(k==0 and c==2):
+        print('you win')
+    elif(k==2 and c==0):
+        print('you lose')
+    elif (k==c):
+        print('its draw')
+        
+    
